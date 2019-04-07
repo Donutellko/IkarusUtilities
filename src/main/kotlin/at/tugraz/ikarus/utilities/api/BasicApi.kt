@@ -23,4 +23,38 @@ class BasicApi (private val basic: BasicService) {
     @RequestMapping("/delete")
     fun delete(@RequestParam("id") id: String) = basic.delete(id)
 
+
+    @RequestMapping("/makecol")
+    fun makeCol(
+        @RequestParam("sid") sid: String,
+        @RequestParam("name") name: String
+    ) = basic.makeCol(sid, name)
+
+    @RequestMapping("/getcol")
+    fun getCol(
+        @RequestParam("sid") sid: String
+    ) = basic.getCol(sid)
+
+    @RequestMapping("/deletecol")
+    fun deleteCol(
+        @RequestParam("sid") sid: String
+    ) = basic.deleleCol(sid)
+
+    @RequestMapping("/insertcol")
+    fun insertCol(
+        @RequestParam("sid") sid: String,
+        @RequestParam("id") id: String
+    ) = basic.insertCol(sid, id)
+
+    @RequestMapping("/removecol")
+    fun removeCol(
+        @RequestParam("sid") sid: String,
+        @RequestParam("id") id: String
+    ) = basic.removeCol(sid, id)
+
+    @RequestMapping("/reset")
+    fun reset(@RequestParam("code") code: String) = basic.reset(code)
+
+
+
 }

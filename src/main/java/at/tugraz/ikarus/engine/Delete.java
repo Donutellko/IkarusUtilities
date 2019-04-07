@@ -41,6 +41,12 @@ public class Delete {
 
     protected String id;
 
+    public Delete() {}
+
+    public Delete(String id) {
+        this.id = id;
+    }
+
     /**
      * Gets the value of the id property.
      *

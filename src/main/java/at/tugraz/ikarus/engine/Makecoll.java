@@ -43,6 +43,14 @@ public class Makecoll {
     protected String name;
     protected String id;
 
+    public Makecoll() {
+    }
+
+    public Makecoll(String id, String name) {
+        this.name = name;
+        this.id = id;
+    }
+
     /**
      * Gets the value of the name property.
      *

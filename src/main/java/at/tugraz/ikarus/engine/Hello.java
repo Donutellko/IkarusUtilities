@@ -40,6 +40,12 @@ public class Hello {
 
     protected String name;
 
+    public Hello() {}
+
+    public Hello(String name) {
+        this.name = name;
+    }
+
     /**
      * Gets the value of the name property.
      *

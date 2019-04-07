@@ -40,6 +40,12 @@ public class Store {
 
     protected String content;
 
+    public Store() {}
+
+    public Store(String content) {
+        this.content = content;
+    }
+
     /**
      * Gets the value of the content property.
      *

@@ -43,6 +43,12 @@ public class Deletecoll {
     protected String sid;
     protected String name;
 
+    public Deletecoll() {}
+
+    public Deletecoll(String sid) {
+        this.sid = sid;
+    }
+
     /**
      * Gets the value of the sid property.
      *

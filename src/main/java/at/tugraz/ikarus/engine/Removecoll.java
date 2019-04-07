@@ -46,6 +46,13 @@ public class Removecoll {
     protected String name;
     protected String id;
 
+    public Removecoll() {}
+
+    public Removecoll(String sid, String id) {
+        this.sid = sid;
+        this.id = id;
+    }
+
     /**
      * Gets the value of the sid property.
      *

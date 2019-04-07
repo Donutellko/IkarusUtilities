@@ -40,6 +40,12 @@ public class Get {
 
     protected String id;
 
+    public Get() {}
+
+    public Get(String id) {
+        this.id = id;
+    }
+
     /**
      * Gets the value of the id property.
      *

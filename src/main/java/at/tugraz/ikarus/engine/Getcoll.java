@@ -43,6 +43,12 @@ public class Getcoll {
     protected String sid;
     protected String name;
 
+    public Getcoll() {}
+
+    public Getcoll(String sid) {
+        this.sid = sid;
+    }
+
     /**
      * Gets the value of the sid property.
      *

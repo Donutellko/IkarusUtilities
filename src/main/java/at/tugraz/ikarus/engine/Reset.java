@@ -40,6 +40,12 @@ public class Reset {
 
     protected String doom;
 
+    public Reset() {}
+
+    public Reset(String doom) {
+        this.doom = doom;
+    }
+
     /**
      * Gets the value of the doom property.
      *

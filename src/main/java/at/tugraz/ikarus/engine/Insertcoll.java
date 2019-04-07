@@ -46,6 +46,13 @@ public class Insertcoll {
     protected String name;
     protected String id;
 
+    public Insertcoll() {}
+
+    public Insertcoll(String sid, String id) {
+        this.sid = sid;
+        this.id = id;
+    }
+
     /**
      * Gets the value of the sid property.
      *
