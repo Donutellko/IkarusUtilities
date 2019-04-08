@@ -6,7 +6,7 @@
 //
 
 
-package at.tugraz.ikarus.engine;
+package at.tugraz.ikarus.engine.request;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,18 +15,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for insertcoll complex type.
+ * <p>Java class for deletecoll complex type.
  *
  * <p>The following schema fragment specifies the expected content contained within this class.
  *
  * <pre>
- * &lt;complexType name="insertcoll">
+ * &lt;complexType name="deletecoll">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="sid" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -34,23 +33,20 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "insertcoll", propOrder = {
+@XmlType(name = "deletecoll", propOrder = {
         "sid",
-        "name",
-        "id"
+        "name"
 })
 @XmlRootElement
-public class Insertcoll {
+public class Deletecoll {
 
-    protected String sid;
-    protected String name;
-    protected String id;
+    private String sid;
+    private String name;
 
-    public Insertcoll() {}
+    public Deletecoll() {}
 
-    public Insertcoll(String sid, String id) {
+    public Deletecoll(String sid) {
         this.sid = sid;
-        this.id = id;
     }
 
     /**
@@ -91,26 +87,6 @@ public class Insertcoll {
      */
     public void setName(String value) {
         this.name = value;
-    }
-
-    /**
-     * Gets the value of the id property.
-     *
-     * @return possible object is
-     * {@link String }
-     */
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * Sets the value of the id property.
-     *
-     * @param value allowed object is
-     *              {@link String }
-     */
-    public void setId(String value) {
-        this.id = value;
     }
 
 }

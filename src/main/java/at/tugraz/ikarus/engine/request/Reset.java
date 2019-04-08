@@ -6,7 +6,7 @@
 //
 
 
-package at.tugraz.ikarus.engine;
+package at.tugraz.ikarus.engine.request;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,16 +15,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for store complex type.
+ * <p>Java class for reset complex type.
  *
  * <p>The following schema fragment specifies the expected content contained within this class.
  *
  * <pre>
- * &lt;complexType name="store">
+ * &lt;complexType name="reset">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="content" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="doom" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -32,38 +32,38 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "store", propOrder = {
-        "content"
+@XmlType(name = "reset", propOrder = {
+        "doom"
 })
 @XmlRootElement
-public class Store {
+public class Reset {
 
-    protected String content;
+    private String doom;
 
-    public Store() {}
+    public Reset() {}
 
-    public Store(String content) {
-        this.content = content;
+    public Reset(String doom) {
+        this.doom = doom;
     }
 
     /**
-     * Gets the value of the content property.
+     * Gets the value of the doom property.
      *
      * @return possible object is
      * {@link String }
      */
-    public String getContent() {
-        return content;
+    public String getDoom() {
+        return doom;
     }
 
     /**
-     * Sets the value of the content property.
+     * Sets the value of the doom property.
      *
      * @param value allowed object is
      *              {@link String }
      */
-    public void setContent(String value) {
-        this.content = value;
+    public void setDoom(String value) {
+        this.doom = value;
     }
 
 }

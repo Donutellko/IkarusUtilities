@@ -8,6 +8,9 @@
 
 package at.tugraz.ikarus.engine;
 
+import at.tugraz.ikarus.engine.request.*;
+import at.tugraz.ikarus.engine.response.*;
+
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
@@ -28,7 +31,7 @@ import javax.xml.namespace.QName;
  * provided in this class.
  */
 @XmlRegistry
-public class ObjectFactory {
+class ObjectFactory {
 
     private final static QName _GetResponse_QNAME = new QName("http://ikarus.me.org/", "getResponse");
     private final static QName _Deletecoll_QNAME = new QName("http://ikarus.me.org/", "deletecoll");

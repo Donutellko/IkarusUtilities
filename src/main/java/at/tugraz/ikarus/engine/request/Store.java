@@ -6,25 +6,25 @@
 //
 
 
-package at.tugraz.ikarus.engine;
+package at.tugraz.ikarus.engine.request;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for insertcollResponse complex type.
+ * <p>Java class for store complex type.
  *
  * <p>The following schema fragment specifies the expected content contained within this class.
  *
  * <pre>
- * &lt;complexType name="insertcollResponse">
+ * &lt;complexType name="store">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="content" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -32,32 +32,38 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "insertcollResponse", propOrder = {
-        "_return"
+@XmlType(name = "store", propOrder = {
+        "content"
 })
-public class InsertcollResponse {
+@XmlRootElement
+public class Store {
 
-    @XmlElement(name = "return")
-    protected String _return;
+    private String content;
+
+    public Store() {}
+
+    public Store(String content) {
+        this.content = content;
+    }
 
     /**
-     * Gets the value of the return property.
+     * Gets the value of the content property.
      *
      * @return possible object is
      * {@link String }
      */
-    public String getReturn() {
-        return _return;
+    public String getContent() {
+        return content;
     }
 
     /**
-     * Sets the value of the return property.
+     * Sets the value of the content property.
      *
      * @param value allowed object is
      *              {@link String }
      */
-    public void setReturn(String value) {
-        this._return = value;
+    public void setContent(String value) {
+        this.content = value;
     }
 
 }

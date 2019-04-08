@@ -6,7 +6,7 @@
 //
 
 
-package at.tugraz.ikarus.engine;
+package at.tugraz.ikarus.engine.response;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,12 +15,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for getResponse complex type.
+ * <p>Java class for deletecollResponse complex type.
  *
  * <p>The following schema fragment specifies the expected content contained within this class.
  *
  * <pre>
- * &lt;complexType name="getResponse">
+ * &lt;complexType name="deletecollResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -32,13 +32,13 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getResponse", propOrder = {
+@XmlType(name = "deletecollResponse", propOrder = {
         "_return"
 })
-public class GetResponse {
+public class DeletecollResponse {
 
     @XmlElement(name = "return")
-    protected String _return;
+    private String _return;
 
     /**
      * Gets the value of the return property.
