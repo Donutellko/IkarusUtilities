@@ -1,9 +1,6 @@
 
 package at.tugraz.ikarus.engine;
 
-import at.tugraz.ikarus.engine.request.*;
-import at.tugraz.ikarus.engine.response.*;
-
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;

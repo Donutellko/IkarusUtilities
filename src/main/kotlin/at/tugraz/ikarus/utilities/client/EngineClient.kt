@@ -1,7 +1,6 @@
 package at.tugraz.ikarus.utilities.client
 
-import at.tugraz.ikarus.engine.request.*
-import at.tugraz.ikarus.engine.response.*
+import at.tugraz.ikarus.engine.*
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport
 import javax.xml.bind.JAXBElement
 
