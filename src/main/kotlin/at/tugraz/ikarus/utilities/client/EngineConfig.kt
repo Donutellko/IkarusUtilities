@@ -9,7 +9,9 @@ import org.springframework.oxm.jaxb.Jaxb2Marshaller
 class EngineConfig(@Value("\${engine-url}") private val url: String) {
 
     @Bean
-    fun marshaller() = Jaxb2Marshaller().apply { contextPath = "CoreWS.wsdl" }
+    fun marshaller() = Jaxb2Marshaller().apply {
+        contextPath = "at.tugraz.ikarus.engine"
+    }
 
     @Bean
     fun client(marsh: Jaxb2Marshaller) = EngineClient().apply {
