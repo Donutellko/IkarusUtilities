@@ -22,7 +22,7 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
 }
 
 group 'at.tugraz.ikarus'
-version '1.0-SNAPSHOT'
+version '0.2'
 
 sourceCompatibility = 1.8
 
@@ -98,7 +98,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-actuator'
 
     compile("org.springframework.ws:spring-ws-core")
-    compile(files(genJaxb.classesDir).builtBy(genJaxb))
+//    compile(files(genJaxb.classesDir).builtBy(genJaxb))
 
     jaxb "com.sun.xml.bind:jaxb-xjc:2.1.7"
 }
