@@ -3,6 +3,7 @@
     <words>
       <w>deletecoll</w>
       <w>getcoll</w>
+      <w>incoll</w>
       <w>insertcoll</w>
       <w>makecoll</w>
       <w>removecoll</w>

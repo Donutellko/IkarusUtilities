@@ -6,7 +6,7 @@ import java.lang.IllegalArgumentException
 import javax.xml.bind.JAXBElement
 
 // https://spring.io/guides/gs/consuming-web-service/
-@Suppress("PLATFORM_CLASS_MAPPED_TO_KOTLIN")
+//@Suppress("PLATFORM_CLASS_MAPPED_TO_KOTLIN")
 class EngineClient : WebServiceGatewaySupport() {
 
     /**
@@ -30,6 +30,11 @@ class EngineClient : WebServiceGatewaySupport() {
         return response.value as GetResponse
     }
 
+    fun change(id: String, content: String): ChangeResponse {
+        val response = send(Change(id = id, content = content))
+        return response.value as ChangeResponse
+    }
+
     fun delete(id: String): DeleteResponse {
         val response = send(Delete(id = id))
         return response.value as DeleteResponse
@@ -47,7 +52,7 @@ class EngineClient : WebServiceGatewaySupport() {
         return response.value as GetcollResponse
     }
 
-    fun deleleCol(sid: String?, name: String?): DeletecollResponse {
+    fun deleteCol(sid: String?, name: String?): DeletecollResponse {
         if (sid == null && name == null)
             throw IllegalArgumentException("Both sid and name should not be null!")
         val response = send(Deletecoll(sid = sid, name = name))
@@ -67,6 +72,21 @@ class EngineClient : WebServiceGatewaySupport() {
     fun reset(code: String): ResetResponse {
         val response = send(Reset(doom = code))
         return response.value as ResetResponse
+    }
+
+    fun searchColl(id: String): SearchcollResponse {
+        val response = send(Searchcoll(id = id))
+        return response.value as SearchcollResponse
+    }
+
+    fun searchObj(text: String): SearchobjResponse {
+        val response = send(Searchobj(text = text))
+        return response.value as SearchobjResponse
+    }
+
+    fun stat(): StatResponse {
+        val response = send(Stat())
+        return response.value as StatResponse
     }
 
 }
