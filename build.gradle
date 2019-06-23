@@ -98,27 +98,28 @@ thinJar {
 bootWar {
     excludeDevtools = true
 }
-
 dependencies {
-//    testCompile group: 'junit', name: 'junit', version: '4.12'
+//    test Compile group: 'junit', name: 'junit', version: '4.12'
 
-    implementation "org.jetbrains.kotlin:kotlin-reflect"
+    implementation 'org.jetbrains.kotlin:kotlin-reflect'
     compile 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
-//    compile 'com.fasterxml.jackson.module:jackson-module-kotlin'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile("org.springframework.ws:spring-ws-core")
 
+    compile 'com.fasterxml.jackson.module:jackson-module-kotlin'
 //    compile 'org.springframework.boot:spring-boot-starter-test'
 //    compile 'org.springframework.boot:spring-boot-devtools'
-    compile 'org.springframework.boot:spring-boot-starter-web'
 //    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
 //    compile 'org.springframework.boot:spring-boot-starter-actuator'
-
-    compile("org.springframework.ws:spring-ws-core")
 //    compile(files(genJaxb.classesDir).builtBy(genJaxb))
 
 
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 
-    jaxb "com.sun.xml.bind:jaxb-xjc:2.1.7"
+
+//    uncomment to be able to fetch files from jaxb
+//    jaxb "com.sun.xml.bind:jaxb-xjc:2.1.7"
 }
+
 
 // http://coronet2.iicm.tugraz.at:8080/IkarusDBEngine/CoreWS?wsdl

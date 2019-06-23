@@ -1,4 +1,4 @@
-package at.tugraz.ikarus.utilities.service;
+package at.tugraz.ikarus.utilities.Utils;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

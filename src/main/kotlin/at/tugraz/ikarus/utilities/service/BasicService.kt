@@ -16,9 +16,9 @@ class BasicService(private val engine: EngineClient) {
 
     fun makeCol(sid: String, name: String) = engine.makeCol(sid = sid, name = name).result
 
-    fun getCol(sid: String?, name: String?) = engine.getCol(sid = sid, name = name).result
+    fun getCol(sid: String?, name: String? = null) = engine.getCol(sid = sid, name = name).result
 
-    fun deleleCol(sid: String?, name: String?) = engine.deleteCol(sid = sid, name = name).result
+    fun deleteCol(sid: String?, name: String? = null) = engine.deleteCol(sid = sid, name = name).result
 
     fun insertCol(sid: String, id: String) = engine.insertCol(sid = sid, id = id).result
 
